@@ -8,7 +8,7 @@ import tempfile
 
 model = YOLO("yolov8x-worldv2.pt")
 
-st.title("Zero-Shot Object Detection using Yolo-World")
+st.title("Electronic Waste Object Detection")
 
 # User input for classes
 custom_classes = st.text_input("Enter classes (comma-separated)", "smartphone, laptop, tablet, monitor, TV, speaker")
@@ -50,7 +50,7 @@ if uploaded_image:
 
     annotated_image = annotate_image(image_cv, results)
 
-    st.image(cv2.cvtColor(annotated_image, cv2.COLOR_BGR2RGB), caption="Detected Objects.", use_column_width=True)
+    st.image(cv2.cvtColor(annotated_image, cv2.COLOR_BGR2RGB), caption="Detected Objects.", use_container_width=True)
 
     annotated_image_pil = Image.fromarray(cv2.cvtColor(annotated_image, cv2.COLOR_BGR2RGB))
 

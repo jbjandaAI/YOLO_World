@@ -1,0 +1,9 @@
+streamlit
+opencv-python
+pillow
+ultralytics
+numpy
+random
+tempfile
+git+https://github.com/ultralytics/CLIP.git
+
